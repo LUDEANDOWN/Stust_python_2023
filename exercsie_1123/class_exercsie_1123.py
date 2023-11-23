@@ -1,31 +1,40 @@
 class Employee:
-    def __init__(self, emp_name, emp_id, emp_salary, emp_department):
-        self.name = emp_name 
-        self.id = emp_id
+    # 創建Employee實例並初始化屬性
+    def __init__(self, emp_name, emp_id, emp_salary, emp_department):  
+        self.name = emp_name  
+        self.id = emp_id 
         self.salary = emp_salary
         self.department = emp_department
-        
+            
+    # 計算薪資方法 
     def calculate_emp_salary(self, hours_worked):
-        if hours_worked > 50:
+        # 如果工時大於50
+        if hours_worked > 50:  
+            # 計算加班時間
             overtime = hours_worked - 50
-            overtime_pay = (overtime * (self.salary / 50))
-            return self.salary + overtime_pay
+            # 更具工資計算加班費
+            overtime_pay = (overtime * (self.salary / 50)) 
+            # 工資 + 加班費
+            return self.salary + overtime_pay 
         else:
+            # 如果不加班直接返回工資
             return self.salary
         
-    def assign_department(self, new_dept):
-        self.department = new_dept
+    # 分配新部門       
+    def assign_department(self, new_department):
+        self.department = new_department
         
+    # 打印員工詳情s
     def print_employee_details(self):
-        print(f"Name: {self.name}") 
-        print(f"ID: {self.id}")
-        print(f"Salary: {self.salary}")
-        print(f"Department: {self.department}")
+        print("Name: "+self.name)  
+        print("ID: "+self.id)
+        print("Salary: "+self.salary)
+        print("Department: "+self.department)
 
-emp1 = Employee("John Adams", "E7876", 50000, "Accounting")
-emp2 = Employee("Mary Jones", "E7499", 45000, "Research") 
-
-emp1.calculate_emp_salary(55) 
-emp1.assign_department("Sales")
+emp1 = Employee("John Adams", "E7876", 50000, "Accounting") 
+emp2 = Employee("Mary Jones", "E7499", 45000, "Research")
+            
+emp1.calculate_emp_salary(90)
+emp1.assign_department("Sales") 
 emp1.print_employee_details()
 
