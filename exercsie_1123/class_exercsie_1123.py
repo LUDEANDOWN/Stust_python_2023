@@ -24,12 +24,12 @@ class Employee:
     def assign_department(self, new_department):
         self.department = new_department
         
-    # 打印員工詳情s
+    # 打印員工詳情
     def print_employee_details(self):
-        print("Name: "+self.name)  
-        print("ID: "+self.id)
-        print("Salary: "+self.salary)
-        print("Department: "+self.department)
+        print("Name: "+str(self.name))  
+        print("ID: "+str(self.id))
+        print("Salary: "+str(self.salary))
+        print("Department: "+str(self.department))
 
 emp1 = Employee("John Adams", "E7876", 50000, "Accounting") 
 emp2 = Employee("Mary Jones", "E7499", 45000, "Research")
