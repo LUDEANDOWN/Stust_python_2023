@@ -5,7 +5,6 @@ class Student:
         self.name = name  
         self.id = id
         self.department = major
-        self.course_changes =id
         self.course_changes = self.CourseAddDrop(self.id)
 
     #加退選類
