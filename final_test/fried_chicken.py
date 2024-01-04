@@ -24,7 +24,7 @@ class FriedChicken:
     def increase_crispiness(self, increment):
         self.crispy_level += increment# 增加酥脆程度
         if increment<0:
-             print(f"脆度減少 {abs(increment)} 個等級.")
+            print(f"脆度減少 {abs(increment)} 個等級.")
         else:
             print(f"再脆度增加 {increment} 個等級.")
 
