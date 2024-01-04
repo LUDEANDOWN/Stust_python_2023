@@ -35,7 +35,7 @@ class FriedChicken:
     def update_base_price(self): #更新最終總價
         print(f"基本價格更新為 ${self.calculate_total_price()}")
 
-# 使用範例
+#建立4個物件
 chicken1 = FriedChicken(flavor="辣味", size="大", crispy_level=3, sauce="烤肉醬", base_price=12) #目前總價12+3=15
 chicken1.display_info()
 chicken1.increase_crispiness(5) #增加脆度5,所以總價15+5=20
